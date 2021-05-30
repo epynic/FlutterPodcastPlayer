@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './view_models/app_provider.dart';
+import './view_models/audio_provider.dart';
+import './views/splash.dart';
 import './utils/theme_config.dart';
-import './views/audio_page.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => AudioProvider()),
       ],
       child: MyApp(),
     ),
@@ -25,21 +27,7 @@ class MyApp extends StatelessWidget {
           darkTheme: ThemeConfig.darkTheme,
           theme: appProvider.theme,
           title: 'Welcome to Flutter',
-          home: Scaffold(
-            appBar: AppBar(
-              actions: [
-                Padding(
-                  padding: EdgeInsets.all(5),
-                  child: Icon(Icons.bookmark_border),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Icon(Icons.more_vert),
-                )
-              ],
-            ),
-            body: AudioPage(),
-          ),
+          home: Splash(),
         );
       },
     );
