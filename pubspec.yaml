@@ -32,6 +32,7 @@ dependencies:
   dio: ^4.0.0
   provider: ^5.0.0
   just_audio: ^0.9.5
+  cached_network_image: ^3.1.0
   just_audio_background: ^0.0.1-beta.1
   
 dev_dependencies:
