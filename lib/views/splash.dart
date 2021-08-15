@@ -20,8 +20,8 @@ class _SplashState extends State<Splash> {
 
   pageDefaults() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      //Provider.of<AudioProvider>(context, listen: false).fetchPlaylist();
-      Provider.of<AudioProvider>(context, listen: false).initPlayer();
+      Provider.of<AudioProvider>(context, listen: false).fetchPlaylist();
+      //Provider.of<AudioProvider>(context, listen: false).initPlayer();
       startTimeout();
     });
   }

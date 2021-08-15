@@ -13,10 +13,7 @@ class AudioPlaylistPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text(Constants.appName),
-        elevation: 1,
-      ),
+          centerTitle: true, title: Text(Constants.appName), elevation: 1),
       body: BodyBuilder(
         apiRequestStatus:
             Provider.of<AudioProvider>(context).getApiPlaylistRequestStatus,
